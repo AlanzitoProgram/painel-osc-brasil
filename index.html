@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Painel estático com dados oficiais sobre transferências federais para Organizações da Sociedade Civil no Brasil.">
+  <title>Painel OSC Brasil</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js" defer></script>
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Navegação principal">
+      <a class="brand" href="index.html" aria-label="Página inicial do Painel OSC Brasil">
+        <span class="brand-mark" aria-hidden="true">OSC</span>
+        <span>Painel OSC Brasil</span>
+      </a>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="menu-principal">
+        Menu
+      </button>
+      <div class="nav-links" id="menu-principal">
+        <a class="active" href="index.html" aria-current="page">Painel</a>
+        <a href="metodologia.html">Metodologia</a>
+        <a href="fontes.html">Fontes</a>
+        <a href="sobre.html">Sobre</a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Alternar modo claro e escuro">
+          <span data-theme-label>Modo escuro</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Dados públicos federais</p>
+          <h1>Transferências federais para OSCs, de 2015 a 2024</h1>
+          <p>
+            Painel neutro e verificável sobre transferências voluntárias de recursos públicos federais para Organizações da Sociedade Civil no Brasil.
+          </p>
+          <div class="hero-actions" aria-label="Ações principais">
+            <a class="button primary" href="#serie-historica">Ver dados</a>
+            <a class="button secondary" href="metodologia.html">Entender metodologia</a>
+          </div>
+        </div>
+        <aside class="source-panel" aria-labelledby="fonte-hero">
+          <h2 id="fonte-hero">Escopo do painel</h2>
+          <p>
+            Os números correspondem a transferências voluntárias federais identificadas pelo Mapa das OSCs/Ipea. Não representam todos os contratos, renúncias fiscais, repasses estaduais ou municipais.
+          </p>
+          <dl>
+            <div>
+              <dt>Fonte principal</dt>
+              <dd>Mapa das OSCs/Ipea</dd>
+            </div>
+            <div>
+              <dt>Atualização da fonte</dt>
+              <dd>Fevereiro de 2025</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section class="container section" aria-labelledby="indicadores-titulo">
+      <div class="section-heading">
+        <p class="eyebrow">Resumo</p>
+        <h2 id="indicadores-titulo">Indicadores do período selecionado</h2>
+      </div>
+      <div class="filters card" aria-label="Filtros do painel">
+        <div class="field">
+          <label for="ano-inicio">Ano inicial</label>
+          <select id="ano-inicio" data-filter-start></select>
+        </div>
+        <div class="field">
+          <label for="ano-fim">Ano final</label>
+          <select id="ano-fim" data-filter-end></select>
+        </div>
+        <div class="field">
+          <label for="governo">Governo</label>
+          <select id="governo" data-filter-government>
+            <option value="todos">Todos</option>
+          </select>
+        </div>
+        <button class="button secondary" type="button" data-reset-filters>Limpar filtros</button>
+      </div>
+      <div class="cards-grid" data-indicator-cards aria-live="polite"></div>
+    </section>
+
+    <section class="container section" id="serie-historica" aria-labelledby="graficos-titulo">
+      <div class="section-heading">
+        <p class="eyebrow">Visualizações</p>
+        <h2 id="graficos-titulo">Quatro leituras dos dados</h2>
+      </div>
+      <div class="charts-grid">
+        <article class="card chart-card">
+          <h3>Evolução anual das transferências</h3>
+          <canvas id="grafico-evolucao" aria-label="Gráfico de linha com transferências por ano" role="img"></canvas>
+        </article>
+        <article class="card chart-card">
+          <h3>OSCs beneficiadas por ano</h3>
+          <canvas id="grafico-oscs" aria-label="Gráfico de barras com número de OSCs beneficiadas por ano" role="img"></canvas>
+        </article>
+        <article class="card chart-card">
+          <h3>Média anual por período</h3>
+          <canvas id="grafico-governos" aria-label="Gráfico de barras com média anual por período de governo" role="img"></canvas>
+        </article>
+        <article class="card chart-card">
+          <h3>Áreas de atuação em 2024</h3>
+          <canvas id="grafico-areas" aria-label="Gráfico de barras horizontais por área de atuação em 2024" role="img"></canvas>
+        </article>
+      </div>
+    </section>
+
+    <section class="container section" aria-labelledby="tabela-titulo">
+      <div class="section-heading table-heading">
+        <div>
+          <p class="eyebrow">Tabela histórica</p>
+          <h2 id="tabela-titulo">Série 2015-2024</h2>
+        </div>
+        <div class="table-actions">
+          <label class="search-label" for="busca-tabela">Buscar</label>
+          <input id="busca-tabela" type="search" data-table-search placeholder="Ano, governo ou grupo">
+          <button class="button secondary" type="button" data-copy-table>Copiar tabela</button>
+          <button class="button primary" type="button" data-export-csv>Exportar CSV</button>
+        </div>
+      </div>
+      <div class="table-wrap card" tabindex="0" aria-live="polite">
+        <table data-history-table>
+          <caption>Transferências federais para OSCs por ano</caption>
+          <thead>
+            <tr>
+              <th scope="col"><button type="button" data-sort="ano">Ano</button></th>
+              <th scope="col"><button type="button" data-sort="periodo_governamental">Governo predominante</button></th>
+              <th scope="col"><button type="button" data-sort="valor_milhoes">Valor</button></th>
+              <th scope="col"><button type="button" data-sort="oscs_beneficiadas">OSCs beneficiadas</button></th>
+              <th scope="col"><button type="button" data-sort="grupo_comparacao">Grupo</button></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p class="status-message" data-table-status role="status"></p>
+    </section>
+
+    <section class="method-note">
+      <div class="container note-grid">
+        <div>
+          <p class="eyebrow">Leitura responsável</p>
+          <h2>O que estes números significam</h2>
+        </div>
+        <p>
+          Transferência de recursos não significa automaticamente desperdício, irregularidade ou ausência de controle. Os valores podem financiar serviços, projetos e parcerias públicas em saúde, educação, pesquisa, assistência social, cultura e outras áreas.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>Painel OSC Brasil. Projeto estático para GitHub Pages.</p>
+      <p>Fonte principal: Mapa das OSCs/Ipea, dados atualizados até fevereiro de 2025.</p>
+    </div>
+  </footer>
+</body>
+</html>

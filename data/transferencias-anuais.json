@@ -1,0 +1,94 @@
+{
+  "metadados": {
+    "titulo": "Transferências federais para OSCs",
+    "unidade_original": "milhões de reais",
+    "fonte": "Mapa das Organizações da Sociedade Civil - Ipea",
+    "url_fonte": "https://bookdown.org/mosc_ipea/relatorio-estatistico-MOSC-2025/cap-transferenciasosc.html",
+    "atualizacao_fonte": "2025-02",
+    "periodo_exibido": "2015-2024",
+    "tipo_dado": "transferências voluntárias de recursos públicos federais",
+    "observacao": "Os valores não representam necessariamente todos os gastos públicos relacionados a entidades sem fins lucrativos."
+  },
+  "dados": [
+    {
+      "ano": 2015,
+      "valor_milhoes": 6552,
+      "valor_reais": 6552000000,
+      "oscs_beneficiadas": 4649,
+      "periodo_governamental": "Dilma Rousseff",
+      "grupo_comparacao": "Dilma"
+    },
+    {
+      "ano": 2016,
+      "valor_milhoes": 7606,
+      "valor_reais": 7606000000,
+      "oscs_beneficiadas": 4638,
+      "periodo_governamental": "Dilma Rousseff / Michel Temer",
+      "grupo_comparacao": "Transição 2016"
+    },
+    {
+      "ano": 2017,
+      "valor_milhoes": 12624,
+      "valor_reais": 12624000000,
+      "oscs_beneficiadas": 4238,
+      "periodo_governamental": "Michel Temer",
+      "grupo_comparacao": "Temer"
+    },
+    {
+      "ano": 2018,
+      "valor_milhoes": 7608,
+      "valor_reais": 7608000000,
+      "oscs_beneficiadas": 4581,
+      "periodo_governamental": "Michel Temer",
+      "grupo_comparacao": "Temer"
+    },
+    {
+      "ano": 2019,
+      "valor_milhoes": 7943,
+      "valor_reais": 7943000000,
+      "oscs_beneficiadas": 4441,
+      "periodo_governamental": "Jair Bolsonaro",
+      "grupo_comparacao": "Bolsonaro"
+    },
+    {
+      "ano": 2020,
+      "valor_milhoes": 7314,
+      "valor_reais": 7314000000,
+      "oscs_beneficiadas": 4466,
+      "periodo_governamental": "Jair Bolsonaro",
+      "grupo_comparacao": "Bolsonaro"
+    },
+    {
+      "ano": 2021,
+      "valor_milhoes": 14087,
+      "valor_reais": 14087000000,
+      "oscs_beneficiadas": 4655,
+      "periodo_governamental": "Jair Bolsonaro",
+      "grupo_comparacao": "Bolsonaro"
+    },
+    {
+      "ano": 2022,
+      "valor_milhoes": 9236,
+      "valor_reais": 9236000000,
+      "oscs_beneficiadas": 4726,
+      "periodo_governamental": "Jair Bolsonaro",
+      "grupo_comparacao": "Bolsonaro"
+    },
+    {
+      "ano": 2023,
+      "valor_milhoes": 9660,
+      "valor_reais": 9660000000,
+      "oscs_beneficiadas": 5230,
+      "periodo_governamental": "Luiz Inácio Lula da Silva",
+      "grupo_comparacao": "Lula"
+    },
+    {
+      "ano": 2024,
+      "valor_milhoes": 19405,
+      "valor_reais": 19405000000,
+      "oscs_beneficiadas": 9693,
+      "periodo_governamental": "Luiz Inácio Lula da Silva",
+      "grupo_comparacao": "Lula"
+    }
+  ]
+}

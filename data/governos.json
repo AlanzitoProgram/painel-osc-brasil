@@ -1,0 +1,44 @@
+{
+  "metodologia": {
+    "criterio": "Agrupamento pelo governo responsável pela totalidade ou maior parte do exercício, mantendo 2016 como ano de transição.",
+    "alerta": "Os períodos possuem quantidades diferentes de anos. A média anual deve ser priorizada sobre a comparação dos totais."
+  },
+  "periodos": [
+    {
+      "id": "dilma",
+      "nome": "Dilma Rousseff",
+      "inicio": 2015,
+      "fim": 2015,
+      "anos_incluidos": [2015]
+    },
+    {
+      "id": "transicao-2016",
+      "nome": "Transição Dilma/Temer",
+      "inicio": 2016,
+      "fim": 2016,
+      "anos_incluidos": [2016]
+    },
+    {
+      "id": "temer",
+      "nome": "Michel Temer",
+      "inicio": 2017,
+      "fim": 2018,
+      "anos_incluidos": [2017, 2018]
+    },
+    {
+      "id": "bolsonaro",
+      "nome": "Jair Bolsonaro",
+      "inicio": 2019,
+      "fim": 2022,
+      "anos_incluidos": [2019, 2020, 2021, 2022]
+    },
+    {
+      "id": "lula",
+      "nome": "Luiz Inácio Lula da Silva",
+      "inicio": 2023,
+      "fim": 2024,
+      "anos_incluidos": [2023, 2024],
+      "periodo_incompleto": true
+    }
+  ]
+}

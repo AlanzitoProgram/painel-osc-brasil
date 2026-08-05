@@ -1,0 +1,36 @@
+{
+  "metadados": {
+    "ultima_revisao_do_projeto": "2026-08-03",
+    "responsabilidade": "Compilação feita para o projeto Painel OSC Brasil a partir de fontes públicas."
+  },
+  "fontes": [
+    {
+      "titulo": "Capítulo 11 - Transferências de Recursos Públicos",
+      "instituicao": "Mapa das Organizações da Sociedade Civil / Ipea",
+      "url": "https://bookdown.org/mosc_ipea/relatorio-estatistico-MOSC-2025/cap-transferenciasosc.html",
+      "uso_no_projeto": "Série anual de transferências, OSCs beneficiadas e distribuição por área de atuação.",
+      "observacao": "Dados atualizados pela fonte até fevereiro de 2025."
+    },
+    {
+      "titulo": "Mapa das Organizações da Sociedade Civil",
+      "instituicao": "Dados.gov.br / Ipea",
+      "url": "https://dados.gov.br/dados/conjuntos-dados/mapaosc",
+      "uso_no_projeto": "Referência institucional da base de dados aberta do Mapa das OSCs.",
+      "observacao": "Conjunto de dados público com recursos financeiros, áreas de atuação e outras bases relacionadas."
+    },
+    {
+      "titulo": "Transferências operacionalizadas no Transferegov.br",
+      "instituicao": "Governo Federal",
+      "url": "https://www.gov.br/transferegov/pt-br/sobre/mapeamento/transferencias-operacionalizadas",
+      "uso_no_projeto": "Contexto sobre instrumentos como convênio, contrato de repasse, termo de colaboração e termo de fomento.",
+      "observacao": "Fonte de apoio para explicar o funcionamento das transferências voluntárias."
+    },
+    {
+      "titulo": "Lei nº 13.019/2014",
+      "instituicao": "Presidência da República",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l13019.htm",
+      "uso_no_projeto": "Marco Regulatório das Organizações da Sociedade Civil.",
+      "observacao": "Base legal para parcerias entre administração pública e OSCs."
+    }
+  ]
+}

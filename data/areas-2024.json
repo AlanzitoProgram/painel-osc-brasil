@@ -1,0 +1,43 @@
+{
+  "metadados": {
+    "ano": 2024,
+    "unidade": "milhões de reais",
+    "fonte": "Mapa das Organizações da Sociedade Civil - Ipea",
+    "url_fonte": "https://bookdown.org/mosc_ipea/relatorio-estatistico-MOSC-2025/cap-transferenciasosc.html",
+    "observacao": "As categorias seguem a classificação adotada na fonte. A soma por área pode diferir do total anual por arredondamentos e critérios de classificação."
+  },
+  "dados": [
+    {
+      "area": "Saúde",
+      "valor_milhoes": 5618.8
+    },
+    {
+      "area": "Outras atividades associativas",
+      "valor_milhoes": 5018.2
+    },
+    {
+      "area": "Educação e pesquisa",
+      "valor_milhoes": 3704.1
+    },
+    {
+      "area": "Associações patronais e profissionais",
+      "valor_milhoes": 2334.5
+    },
+    {
+      "area": "Desenvolvimento e defesa de direitos e interesses",
+      "valor_milhoes": 1730
+    },
+    {
+      "area": "Religião",
+      "valor_milhoes": 494.4
+    },
+    {
+      "area": "Cultura e recreação",
+      "valor_milhoes": 222.5
+    },
+    {
+      "area": "Assistência social",
+      "valor_milhoes": 152.4
+    }
+  ]
+}
