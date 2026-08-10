@@ -1,10 +1,35 @@
 import { formatarInteiro, formatarMoedaBilhoes, formatarMilhoes, media, obterCoresDoTema, somar } from "./utilitarios.js";
 
 const instancias = {};
+const ouvintesRedimensionamento = {};
+
+const redimensionarGrafico = (instancia) => {
+  if (!instancia?.canvas?.isConnected) {
+    return;
+  }
+
+  if (typeof window.requestAnimationFrame === "function") {
+    window.requestAnimationFrame(() => {
+      if (instancia?.canvas?.isConnected) {
+        instancia.resize();
+      }
+    });
+    return;
+  }
+
+  instancia.resize();
+};
 
 const destruir = (id) => {
-  if (instancias[id]) {
-    instancias[id].destroy();
+  const instancia = instancias[id];
+
+  if (instancia) {
+    if (ouvintesRedimensionamento[id]) {
+      window.removeEventListener("resize", ouvintesRedimensionamento[id]);
+      delete ouvintesRedimensionamento[id];
+    }
+
+    instancia.destroy();
     delete instancias[id];
   }
 };
@@ -53,7 +78,20 @@ const criarGrafico = (idCanvas, configuracao) => {
   }
 
   destruir(idCanvas);
-  instancias[idCanvas] = new Chart(canvas, configuracao);
+
+  const instancia = new Chart(canvas, configuracao);
+  instancias[idCanvas] = instancia;
+
+  if (ouvintesRedimensionamento[idCanvas]) {
+    window.removeEventListener("resize", ouvintesRedimensionamento[idCanvas]);
+  }
+
+  const tratarRedimensionamento = () => redimensionarGrafico(instancia);
+  ouvintesRedimensionamento[idCanvas] = tratarRedimensionamento;
+  window.addEventListener("resize", tratarRedimensionamento);
+
+  redimensionarGrafico(instancia);
+  return instancia;
 };
 
 export const calcularPeriodos = (transferencias, governos) => {

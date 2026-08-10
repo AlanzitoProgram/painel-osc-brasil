@@ -134,16 +134,23 @@ input[type="search"] {
 }
 
 .chart-card {
-  min-height: 390px;
+  height: 390px;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
+
 
 .chart-card h3 {
   font-size: 1.05rem;
 }
 
 .chart-card canvas {
-  min-height: 300px;
+  display: block;
+  width: 100% !important;
+  height: 300px !important;
+  max-height: 300px;
+  flex: 1;
 }
 
 .table-heading {
